@@ -31,13 +31,13 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/cricket-player-stats.git
+   git clone https://github.com/RahulRm25/Indian-Cricket-Players-Stats.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd cricket-player-stats
+   cd Indian-Cricket-Players-Stats
    ```
 
 3. Install the dependencies:
@@ -49,13 +49,13 @@ Make sure you have the following installed:
 4. Start the server:
 
    ```bash
-   node app.js
+   node index.js
    ```
 
 5. Open your browser and go to:
 
    ```
-   http://localhost:3000
+   http://localhost:3001
    ```
 
 ## Project Structure
@@ -63,12 +63,13 @@ Make sure you have the following installed:
 ```
 cricket-player-stats/
 ├── public/
-│   ├── images/       # Player images and other static assets
-│   ├── styles.css    # CSS for styling the app
+│   ├── images/        # Player images and other static assets
+│   ├── styles/       
+|       ├── main.css   # CSS for styling the app
 ├── views/
-│   ├── index.ejs     # Main HTML template for the app
+│   ├── index.ejs      # Main HTML template for the app
 ├── stats.json         # JSON file containing player data
-├── app.js             # Main server file
+├── index.js             # Main server file
 ├── package.json       # Node.js dependencies and scripts
 └── README.md          # Project documentation
 ```
