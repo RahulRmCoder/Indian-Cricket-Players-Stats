@@ -115,4 +115,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### Author
 
-Created by **[Your Name]**. Feel free to reach out for any suggestions or improvements!
+Created by **[Rahul Rajasekharan Menon]**. Feel free to reach out for any suggestions or improvements!
