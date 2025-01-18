@@ -31,7 +31,7 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/RahulRm25/Indian-Cricket-Players-Stats.git
+   git clone https://github.com/RahulRmCoder/Indian-Cricket-Players-Stats.git
    ```
 
 2. Navigate to the project directory:
@@ -79,23 +79,6 @@ cricket-player-stats/
 1. Open the app in your browser.
 2. Select or type a player's name in the input field and submit.
 3. View detailed statistics of the selected player.
-
-## Data Format (`stats.json`)
-
-Player data is stored in a JSON file in the following format:
-
-```json
-[
-  {
-    "name": "Player Name",
-    "matches": 100,
-    "innings": 95,
-    "runs": 5000,
-    "average": 50.0,
-    "trophies": 5
-  }
-]
-```
 
 To add or update player data, simply modify the `stats.json` file.
 
