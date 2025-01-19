@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Indian Cricket Legends</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+<body>
+  <h1>Indian Cricket Legends 🏏</h1>
+  <form action="/stats" method="POST" class="buttons">
+    <div>
+      <button type="submit" value="sachin tendulkar" name="choice">
+        <img src="/images/sachin.jpg" alt="Sachin Tendulkar">
+      </button>
+    </div>
+    <div>
+      <button type="submit" value="ms dhoni" name="choice">
+        <img src="/images/dhoni.jpg" alt="MS Dhoni">
+      </button>
+    </div>
+    <div>
+      <button type="submit" value="rahul dravid" name="choice">
+        <img src="/images/rahul.png" alt="rahul dravid">
+      </button>
+    </div>
+    <div>
+      <button type="submit" value="virat kohli" name="choice">
+        <img src="/images/virat.jpg" alt="Virat Kohli">
+      </button>
+    </div>
+    <div>
+      <button type="submit" value="sourav ganguly" name="choice">
+        <img src="/images/sourav.png" alt="Sourav Ganguly">
+      </button>
+    </div>
+    <div>
+      <button type="submit" value="rohit sharma" name="choice">
+        <img src="/images/rohit.png" alt="Rohit Sharma">
+      </button>
+    </div>
+    <div>
+      <button type="submit" value="vvs laxman" name="choice">
+        <img src="/images/laxman.png" alt="VVS Laxman">
+      </button>
+    </div>
+   
+  </form>
+  
+
+  <div id="statContainer">
+    <% if (stat) { %>
+      <h2 id="playerName"><%= stat.name %> - <%= stat.type %></h2>
+      <h3>Batting Stats:</h3>
+      <table id="statsTable">
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Matches</th>
+            <th>Innings</th>
+            <th>Not Outs</th>
+            <th>Runs</th>
+            <th>Average</th>
+            <th>Highest Score</th>
+            <th>Hundreds</th>
+            <th>Fifties</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (const [format, data] of Object.entries(stat.Batting)) { %>
+            <% if (format !== 'TrophiesAsCaptain') { %>
+              <tr>
+                <td><%= format %></td>
+                <td><%= data.Matches %></td>
+                <td><%= data.Innings %></td>
+                <td><%= data.NotOuts %></td>
+                <td><%= data.Runs %></td>
+                <td><%= data.Average %></td>
+                <td><%= data.Highest %></td>
+                <td><%= data.Hundreds %></td>
+                <td><%= data.HalfCenturies %></td>
+              </tr>
+            <% } %>
+          <% } %>
+        </tbody>
+      </table>
+      <h3>Trophies as Captain:</h3>
+      <ul id="trophiesList">
+        <% stat.Batting.TrophiesAsCaptain.forEach(trophy => { %>
+          <li><%= trophy.T20I || trophy.ODI || trophy.T20 %>: <%= trophy.NoOfTrophies %> (<%= trophy.Year %>)</li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <h2>Select a player to see their stats 👆</h2>
+    <% } %>
+  </div>
+</body>
+</html>
